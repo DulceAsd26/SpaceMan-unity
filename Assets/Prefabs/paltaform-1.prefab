@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 3171189731050738779}
   - component: {fileID: 3388216752958291758}
   - component: {fileID: 5766251205945870140}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: paltaform-1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
