@@ -13,6 +13,15 @@ public class GameManager : MonoBehaviour {
 
     public GameState currentGameState = GameState.menu;
 
+    public static GameManager sharedInstance;
+
+    void Awake()
+    {
+        if (sharedInstance == null)
+        {
+        sharedInstance = thid;
+        }
+    }
 
     // Start is called before the first frame update
     void Start(){
