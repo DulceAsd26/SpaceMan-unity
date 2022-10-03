@@ -29,7 +29,7 @@ public class PlayerController : MonoBehaviour{
 
     // Update is called once per frame
     void Update() {
-        if (Input.GetKeyDown(KeyCode.Space) || Input.GetMouseButtonDown(0)){
+        if (Input.GetButtonDown("Jump")){
             Jump();  
         }
 
@@ -41,9 +41,16 @@ public class PlayerController : MonoBehaviour{
 
     void FixedUpdate()
     {
-        if (rigidBody.velocity.x < runningSpeed){
+        if(GameManager.sharedInstance.currentGameState == GameState.inGame)
+        {
+        if (rigidBody.velocity.x < runningSpeed)
+        {
             rigidBody.velocity = new Vector2(runningSpeed, //x
-                                             rigidBody.velocity.y); //y;
+                                             rigidBody.velocity.y
+                                             ); //y;
+        }
+        }else{
+            rigidBody.velocity = new Vector2(0, rigidBody.velocity.y);
         }
     }
 
