@@ -56,9 +56,12 @@ public class PlayerController : MonoBehaviour{
 
     void Jump()
     {
+        if(GameManager.sharedInstance.currentGameState == GameState.inGame)
+        {
         if(IsTouchingTheGround())
         {
         rigidBody.AddForce(Vector2.up*jumpForce, ForceMode2D.Impulse);
+        }
         }
     }
 
