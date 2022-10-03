@@ -19,7 +19,7 @@ public class GameManager : MonoBehaviour {
     {
         if (sharedInstance == null)
         {
-        sharedInstance = thid;
+        sharedInstance = this;
         }
     }
 
@@ -30,19 +30,21 @@ public class GameManager : MonoBehaviour {
 
     // Update is called once per frame
     void Update(){
-
+        if(Input.GetKeyDown(KeyCode.S)){
+            StartGame();
+        }
     }
 
     public void StartGame(){
-        //Start
+        SetGameState(GameState.inGame);
     }
 
     public void GameOver(){
-        //GameOver
+        SetGameState(GameState.gameOver);
     }
 
     public void BackToMenu(){
-       //Back
+       SetGameState(GameState.menu);
     }
 
     private void SetGameState(GameState newGameSate){
