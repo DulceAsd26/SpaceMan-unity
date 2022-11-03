@@ -56,6 +56,8 @@ public class GameManager : MonoBehaviour {
             //TODO: colocar la lógica del menú 
         }else if(newGameSate == GameState.inGame){
             //TODO: hay que preparar la escena para jugar
+            LevelManager.sharedInstance.RemoveAllLevelBlocks();
+            LevelManager.sharedInstance.GenerateInitialBlocks();
             controller.StartGame();
         }else if(newGameSate == GameState.gameOver){
             //TODO: preparar el juego para el Game Over
@@ -64,6 +66,7 @@ public class GameManager : MonoBehaviour {
 
         this.currentGameState = newGameSate;
     }
+    
 
 
 }
