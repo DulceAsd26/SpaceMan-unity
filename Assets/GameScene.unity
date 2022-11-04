@@ -1090,6 +1090,7 @@ GameObject:
   - component: {fileID: 1484469407}
   - component: {fileID: 1484469406}
   - component: {fileID: 1484469405}
+  - component: {fileID: 1484469409}
   m_Layer: 5
   m_Name: Game Canvas
   m_TagString: Untagged
@@ -1181,6 +1182,21 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 0}
+--- !u!114 &1484469409
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1484469404}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 64688b368daad82488e6e0690f96fb53, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  coinsText: {fileID: 213113787}
+  scoreText: {fileID: 213089705}
+  maxScoreText: {fileID: 2110511634}
 --- !u!1 &1510644529
 GameObject:
   m_ObjectHideFlags: 0
