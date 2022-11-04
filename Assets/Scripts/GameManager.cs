@@ -59,7 +59,9 @@ public class GameManager : MonoBehaviour {
             LevelManager.sharedInstance.RemoveAllLevelBlocks();
             LevelManager.sharedInstance.GenerateInitialBlocks();
             controller.StartGame();
-        }else if(newGameSate == GameState.gameOver){
+
+        }
+        else if(newGameSate == GameState.gameOver){
             //TODO: preparar el juego para el Game Over
         }
 
@@ -67,7 +69,6 @@ public class GameManager : MonoBehaviour {
         this.currentGameState = newGameSate;
     }
     
-
 
 }
     
